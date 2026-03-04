@@ -1,0 +1,44 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.board-container {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  padding: 15px;
+  border: 1px solid #ccc;
+  min-width: 240px;
+  border-radius: 6px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  padding: 8px;
+  margin: 8px 0;
+  background: #f4f4f4;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  padding: 6px;
+  margin-top: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
