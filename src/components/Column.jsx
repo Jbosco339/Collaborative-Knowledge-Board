@@ -38,7 +38,7 @@ function Column({ column, addCard, deleteColumn, editColumn, deleteCard }) {
         placeholder="New card..."
       />
 
-     
+      <button onClick={handleAdd}>Add</button>
     </div>
   );
 }
