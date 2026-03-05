@@ -4,23 +4,22 @@ import { useState } from "react";
 function BoardView() {
   const [columns, setColumns] = useState([
     {
-      id: "1",
-      title: "Ideas",
-      cards: [{ id: "c1", title: "Build dark mode" }]
+      id: "1", 
+      title: "Board 1",
+      cards: [{ id: "c1", title: "Task one" }]
     },
     {
       id: "2",
-      title: "In Progress",
-      cards: [{ id: "c2", title: "Refactor components" }]
+      title: "Board 2",
+      cards: [{ id: "c2", title: "Task b" }]
     }
   ]);
 
-  // Add new column
+ 
   const addColumn = () => {
     const title = prompt("Column name:");
 
     if (!title || !title.trim()) return;
-
     const newColumn = {
       id: Date.now().toString(),
       title,
@@ -29,13 +28,13 @@ function BoardView() {
 
     setColumns([...columns, newColumn]);
   };
-
-  // Edit column name
   const editColumn = (columnId) => {
     const title = prompt("New column name:");
 
+    // Prevent invalid titles
     if (!title || !title.trim()) return;
 
+    // Map through columns and update only matching column
     const updated = columns.map((col) =>
       col.id === columnId ? { ...col, title } : col
     );
@@ -43,13 +42,14 @@ function BoardView() {
     setColumns(updated);
   };
 
-  // Delete column
+  // Function to delete a column
   const deleteColumn = (columnId) => {
     const updated = columns.filter((col) => col.id !== columnId);
+
     setColumns(updated);
   };
 
-  // Add card to column
+  // Function to add a new card inside a column
   const addCard = (columnId, title) => {
     if (!title.trim()) return;
 
@@ -64,14 +64,16 @@ function BoardView() {
         : col
     );
 
+    // Update state
     setColumns(updated);
   };
 
-  // Delete card
+  // Function to delete a card from a specific column
   const deleteCard = (columnId, cardId) => {
     const updated = columns.map((col) => {
       if (col.id !== columnId) return col;
 
+      // If target column, remove matching card
       return {
         ...col,
         cards: col.cards.filter((card) => card.id !== cardId)
@@ -82,23 +84,27 @@ function BoardView() {
   };
 
   return (
-    <div>
+    <div className="parent_div">
       <div className="board-container">
         {columns.map((column) => (
+          <div className="column-wrapper" key={column.id}>
           <Column
-            key={column.id}
-            column={column}
+            key={column.id} 
+            column={column} 
             addCard={addCard}
             deleteColumn={deleteColumn}
             editColumn={editColumn}
             deleteCard={deleteCard}
           />
+          </div>
         ))}
+          
       </div>
+      <button onClick={addColumn} >
+        + Add Column
+      </button>
 
-      
     </div>
   );
 }
-
 export default BoardView;

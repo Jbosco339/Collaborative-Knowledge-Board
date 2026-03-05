@@ -1,18 +1,39 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
 }
-
+.parent_div{
+  width: 90%;
+  margin: auto;
+}
 .board-container {
+  width: 100%;
   display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding: 16px;
+  flex-wrap: wrap;
   gap: 20px;
+}
+.board_header{
+  text-align: center;
+}
+.column-wrapper {
+  width: 48%;    
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;    
 }
 
 .column {
-  padding: 15px;
+  background-color: #f4f5f7;
+  width: 95%;
+  padding: 16px;
   border: 1px solid #ccc;
-  min-width: 240px;
   border-radius: 6px;
 }
 
@@ -41,4 +62,26 @@ input {
   margin-top: 8px;
   width: 100%;
   box-sizing: border-box;
+}
+.btn_edit{
+  padding: 1px 8px;
+  margin-right: 10px;
+}
+.item_delete_btn{
+  padding: 2px;
+}
+.description_div{
+  display: flex;
+  
+}
+#description{
+  font-size: 13px;
+  padding-top: 3px;
+  padding-right: 5px;
+}
+.add_img{
+  width: 20px;
+}
+.input_add_div{
+  display: flex;
 }

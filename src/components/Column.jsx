@@ -5,40 +5,54 @@ function Column({ column, addCard, deleteColumn, editColumn, deleteCard }) {
   const [newTitle, setNewTitle] = useState("");
 
   const handleAdd = () => {
+    
     if (!newTitle.trim()) return;
 
     addCard(column.id, newTitle);
+
+    // Clear input field after adding card
     setNewTitle("");
   };
 
   return (
     <div className="column">
       <div className="column-header">
+
         <h3>{column.title}</h3>
 
         <div>
-          <button onClick={() => editColumn(column.id)}>Edit</button>
-          <button onClick={() => deleteColumn(column.id)}>Delete</button>
+          
+          <button className="btn_edit" onClick={() => editColumn(column.id)}>
+            Edit
+          </button>
+
+          <button className="btn_edit" onClick={() => deleteColumn(column.id)}>
+            Delete
+          </button>
         </div>
       </div>
 
       {column.cards.map((card) => (
         <Card
-          key={card.id}
-          card={card}
-          columnId={column.id}
-          deleteCard={deleteCard}
+          key={card.id}                
+          card={card}                   
+          columnId={column.id}         
+          deleteCard={deleteCard} 
         />
       ))}
-
+      <div className="description_div">
       <input
         type="text"
-        value={newTitle}
+        value={newTitle}                  
         onChange={(e) => setNewTitle(e.target.value)}
         placeholder="New card..."
       />
 
-      <button onClick={handleAdd}>Add</button>
+      <button onClick={handleAdd}>
+        <img src="/public/add.PNG" className="add_img" alt="" />
+      </button>
+      </div>
+
     </div>
   );
 }

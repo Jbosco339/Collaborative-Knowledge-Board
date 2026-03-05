@@ -1,11 +1,11 @@
-import Board from './components/BoardView'
+import BoardView from './components/BoardView'
 import './App.css'
 
 function App() {
   return (
     <>
-     <h1>collaborative knowledge board</h1>
-     <Board />
+     <h2 className='board_header'>collaborative knowledge board</h2>
+     <BoardView />
     </>
   );
 }
