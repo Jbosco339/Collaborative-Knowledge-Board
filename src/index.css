@@ -96,7 +96,6 @@ input {
   padding: 1px;
   font-size: 80px;
   background-color: lightgray;
-  filter: invert();
   border-radius: 2px;
 }
 .add_column{
