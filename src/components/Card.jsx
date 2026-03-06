@@ -3,8 +3,8 @@ function Card({ card, columnId, deleteCard, column }) {
     <div className="card">
       <span>{card.title}</span>
 
-      <button className="item_delete_btn" onClick={() => deleteCard(columnId, card.id)}>
-        DEL
+      <button className="item_delete_btn1" onClick={() => deleteCard(columnId, card.id)}>
+        <h3>X</h3>
       </button>
 
     </div>

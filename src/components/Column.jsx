@@ -47,10 +47,9 @@ function Column({ column, addCard, deleteColumn, editColumn, deleteCard }) {
         onChange={(e) => setNewTitle(e.target.value)}
         placeholder="New card..."
       />
-
-      <button onClick={handleAdd}>
-        <img src="/public/add.PNG" className="add_img" alt="" />
-      </button>
+        <img src="/public/add2.PNG" className="add_img" alt="addImage"
+        onClick={handleAdd}
+        />
       </div>
 
     </div>

@@ -5,13 +5,13 @@ function BoardView() {
   const [columns, setColumns] = useState([
     {
       id: "1", 
-      title: "Board 1",
+      title: "Column 1",
       cards: [{ id: "c1", title: "Task one" }]
     },
     {
       id: "2",
-      title: "Board 2",
-      cards: [{ id: "c2", title: "Task b" }]
+      title: "Column 2",
+      cards: [{ id: "c2", title: "List task" }]
     }
   ]);
 
@@ -72,8 +72,6 @@ function BoardView() {
   const deleteCard = (columnId, cardId) => {
     const updated = columns.map((col) => {
       if (col.id !== columnId) return col;
-
-      // If target column, remove matching card
       return {
         ...col,
         cards: col.cards.filter((card) => card.id !== cardId)
@@ -100,7 +98,7 @@ function BoardView() {
         ))}
           
       </div>
-      <button onClick={addColumn} >
+      <button onClick={addColumn} className="add_column">
         + Add Column
       </button>
 

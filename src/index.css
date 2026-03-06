@@ -5,28 +5,31 @@
 }
 body {
   font-family: Arial, sans-serif;
+  color: #1f2937;
+  background-color: #1e3a8a;
 }
 .parent_div{
   width: 90%;
   margin: auto;
+  /* background-color: #f3f4f6; */
 }
 .board-container {
   width: 100%;
   display: flex;
-  align-items: flex-start;
-  overflow-x: auto;
-  padding: 16px;
+  padding: 16px 4px ;
   flex-wrap: wrap;
-  gap: 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: #336eb6;
 }
 .board_header{
+  padding-top: 2rem;
   text-align: center;
+  color: lightgray;
 }
 .column-wrapper {
-  width: 48%;    
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;    
+  width: 49%;    
+  /* margin: auto; */
 }
 
 .column {
@@ -34,19 +37,23 @@ body {
   width: 95%;
   padding: 16px;
   border: 1px solid #ccc;
+  /* margin-bottom: 10px; */
+  margin: 10px  auto;
   border-radius: 6px;
 }
 
 .column-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  background-color: #ccd0db;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 .card {
   padding: 8px;
   margin: 8px 0;
-  background: #f4f4f4;
+  background-color: #ccd0db;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
@@ -55,33 +62,47 @@ body {
 
 button {
   cursor: pointer;
+  border: 1px solid lightgray;
+}
+button:hover{
+  background-color: #92c7f1;
+  color: black;
 }
 
 input {
   padding: 6px;
   margin-top: 8px;
   width: 100%;
-  box-sizing: border-box;
 }
 .btn_edit{
   padding: 1px 8px;
   margin-right: 10px;
 }
-.item_delete_btn{
-  padding: 2px;
+.item_delete_btn1{
+  padding: 2px 5px;
+  background-color: rgb(74, 74, 74);
+  border: none;
+  color: lightgray;
+  border-radius: 5px;
 }
 .description_div{
   display: flex;
-  
-}
-#description{
-  font-size: 13px;
-  padding-top: 3px;
-  padding-right: 5px;
 }
 .add_img{
   width: 20px;
+  height: 20px;
+  margin: 12px 8px;
+  cursor: pointer;
+  padding: 1px;
+  font-size: 80px;
+  background-color: lightgray;
+  filter: invert();
+  border-radius: 2px;
 }
-.input_add_div{
-  display: flex;
+.add_column{
+  width: 15%;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 700;
 }
