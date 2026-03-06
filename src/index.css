@@ -88,15 +88,12 @@ input {
 .description_div{
   display: flex;
 }
-.add_img{
-  width: 20px;
-  height: 20px;
-  margin: 12px 8px;
-  cursor: pointer;
-  padding: 1px;
-  font-size: 80px;
+.addTask{
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
   background-color: lightgray;
-  border-radius: 2px;
+  font-size: 20px;
 }
 .add_column{
   width: 15%;
