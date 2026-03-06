@@ -63,6 +63,7 @@ body {
 button {
   cursor: pointer;
   border: 1px solid lightgray;
+  color: #000;
 }
 button:hover{
   background-color: #92c7f1;
@@ -89,11 +90,11 @@ input {
   display: flex;
 }
 .addTask{
-  width: 30px;
-  height: 30px;
+  width: 25px;
   margin-top: 8px;
   background-color: lightgray;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 500;
 }
 .add_column{
   width: 15%;
